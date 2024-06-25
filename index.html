@@ -4,8 +4,10 @@
 <title>Page Title</title>
 </head>
 <body>
-
-<script src="https://wubooksrl2023--dev1.sandbox.my.site.com/support/lightning/lightning.out.js"></script>
+<div id="lightningLocator">
+<p>Salesforce Scheduler 1.0</p>
+</div>
+<script src="https://wubooksrl2023--dev1.sandbox.my.site.com/lightning/lightning.out.js"></script>
 <script>
     $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
         function() {                  // Callback once framework and app load
@@ -17,13 +19,8 @@
                     cmp.startFlow("Prenotazione_appuntamenti_da_sito_WuBook");
                 }
             );
-        },    'https://wubooksrl2023--dev1.sandbox.my.site.com/support'  // Site endpoint
+        },    'https://wubooksrl2023--dev1.sandbox.my.site.com'  // Site endpoint
     );
 </script>
-
-<div id="lightningLocator">
-<p>Salesforce Scheduler 1.0</p>
-</div>
-
 </body>
 </html>
