@@ -7,7 +7,7 @@
 <div id="lightningLocator">
 <p>Salesforce Scheduler 1.1</p>
 </div>
-<script src="https://wubooksrl2023--dev1.sandbox.my.site.com/lightning/lightning.out.js"></script>
+<script src="https://wubooksrl2023--dev1.sandbox.my.site.com/wbsupport/lightning/lightning.out.js"></script>
 <script>
     $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
         function() {                  // Callback once framework and app load
@@ -16,10 +16,10 @@
                 { },    // attributes to set on the component when created
                 "lightningLocator",    // the DOM location to insert the component
                 function(cmp) {            // API name of the Flow
-                    cmp.startFlow("Prenotazione_appuntamenti_da_sito_WuBook");
+                    cmp.startFlow('Prenotazione_appuntamenti_da_sito_WuBook');
                 }
             );
-        },    'https://wubooksrl2023--dev1.sandbox.my.site.com/'  // Site endpoint
+        }, 'https://wubooksrl2023--dev1.sandbox.my.site.com/wbsupport'  // Site endpoint
     );
 </script>
 </body>
