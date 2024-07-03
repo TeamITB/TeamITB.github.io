@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>New site</title>
+<title>Page Title</title>
 </head>
 <body>
-<div id="lightningLocator">
-<p>Test 1.2</p>
-</div>
-<script src="https://wubooksrl2023--dev1.sandbox.my.site.com/wbsupport/lightning/lightning.out.js"></script>
-<script>
-    $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
-        function() {                  // Callback once framework and app load
-            $Lightning.createComponent(
-                "lightning:flow",    // top-level component of your app
-                { },    // attributes to set on the component when created
-                "lightningLocator",    // the DOM location to insert the component
-                function(cmp) {            // API name of the Flow
-                    cmp.startFlow('Prenotazione_appuntamenti_da_sito_WuBook');
-                }
-            );
-        }, 'https://wubooksrl2023--dev1.sandbox.my.site.com/wbsupport'  // Site endpoint
-    );
+<script src="https://wubooksrl2023--dev1.sandbox.my.site.com/wbsupport/lightning/lightning.out.js">
 </script>
+<script>
+$Lightning.use("runtime_appointmentbooking:lightningOutGuest",
+function() { // Callback once framework and app load
+$Lightning.createComponent(
+"lightning:flow", // top-level component of your app
+{ }, // attributes to set on the component when created
+"lexcontainer", // the DOM location to insert the component
+function(component) { // API name of the Flow
+component.startFlow('Prenotazione_appuntamenti_da_sito_WuBook');
+}
+);
+}, 'https://wubooksrl2023--dev1.sandbox.my.site.com/wbsupport' // Site endpoint
+);
+</script>
+
+<div id="lexcontainer">
+<p>Invoke the Lightning Component specified in the Script.</p>
+</div>
+
 </body>
 </html>
