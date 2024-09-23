@@ -4,7 +4,7 @@
 <title>Page Title</title>
 </head>
 <body>
-<script src="https://wubooksrl2023--dev1.sandbox.my.site.com/wbsupport/lightning/lightning.out.js">
+<script src="https://wubooksrl2023.my.site.com/wbsupport/lightning/lightning.out.js">
 </script>
 <script>
 $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
@@ -14,15 +14,27 @@ $Lightning.createComponent(
 { }, // attributes to set on the component when created
 "lexcontainer", // the DOM location to insert the component
 function(component) { // API name of the Flow
-component.startFlow('Prenotazione_appuntamenti_da_sito_WuBook');
+                    var inputVariables = [
+                                    {
+                                        name : 'WB_Account_Id',
+                                        type : 'String',
+                                        value : '1587394068'
+                                    },
+                                    {
+                                        name : 'Case_Id',
+                                        type : 'String',
+                                        value : '500R200000EzdEFIAZ'
+                                    }                                  
+                    ];
+component.startFlow('Prenotazione_appuntamenti_da_sito_WuBook',inputVariables);
 }
 );
-}, 'https://wubooksrl2023--dev1.sandbox.my.site.com/wbsupport' // Site endpoint
+}, 'https://wubooksrl2023.my.site.com/wbsupport' // Site endpoint
 );
 </script>
 
 <div id="lexcontainer">
-<p>Invoke the Lightning Component specified in the Script.</p>
+<p>Schedulazione appuntamento</p>
 </div>
 
 </body>
